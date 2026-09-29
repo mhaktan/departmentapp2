@@ -1,0 +1,295 @@
+{
+  "id": "report-purchaseRequest-1790680304192",
+  "name": "Satın Alma Talebi Detay Raporu",
+  "orientation": "portrait",
+  "pageSize": "a4",
+  "elements": [
+    {
+      "id": "pdf-mumkthkw-0",
+      "type": "header",
+      "x": 20,
+      "y": 25,
+      "width": 170,
+      "height": 10,
+      "props": {
+        "text": "Satın Alma Talebi Detay Raporu",
+        "fontSize": 16,
+        "fontWeight": "bold"
+      }
+    },
+    {
+      "id": "pdf-mumkthkw-1",
+      "type": "divider",
+      "x": 20,
+      "y": 39,
+      "width": 170,
+      "height": 2,
+      "props": {
+        "lineColor": "#999999"
+      }
+    },
+    {
+      "id": "pdf-mumkthkw-2",
+      "type": "textbox",
+      "x": 20,
+      "y": 45,
+      "width": 170,
+      "height": 7,
+      "props": {
+        "text": "Talep Bilgileri",
+        "fontSize": 12,
+        "fontWeight": "bold"
+      }
+    },
+    {
+      "id": "pdf-mumkthkw-3",
+      "type": "textbox",
+      "x": 20,
+      "y": 56,
+      "width": 170,
+      "height": 6,
+      "props": {
+        "text": "Request Number: {{data.requestNumber}}",
+        "binding": "data.requestNumber",
+        "fontSize": 10
+      }
+    },
+    {
+      "id": "pdf-mumkthkw-4",
+      "type": "textbox",
+      "x": 20,
+      "y": 66,
+      "width": 170,
+      "height": 6,
+      "props": {
+        "text": "Justification: {{data.justification}}",
+        "binding": "data.justification",
+        "fontSize": 10
+      }
+    },
+    {
+      "id": "pdf-mumkthkw-5",
+      "type": "textbox",
+      "x": 20,
+      "y": 76,
+      "width": 170,
+      "height": 6,
+      "props": {
+        "text": "Total Amount: {{data.totalAmount}}",
+        "binding": "data.totalAmount",
+        "fontSize": 10
+      }
+    },
+    {
+      "id": "pdf-mumkthkw-6",
+      "type": "textbox",
+      "x": 20,
+      "y": 86,
+      "width": 170,
+      "height": 6,
+      "props": {
+        "text": "Needed Date: {{data.neededDate}}",
+        "binding": "data.neededDate",
+        "fontSize": 10
+      }
+    },
+    {
+      "id": "pdf-mumkthkw-7",
+      "type": "textbox",
+      "x": 20,
+      "y": 96,
+      "width": 170,
+      "height": 6,
+      "props": {
+        "text": "Approved Date: {{data.approvedDate}}",
+        "binding": "data.approvedDate",
+        "fontSize": 10
+      }
+    },
+    {
+      "id": "pdf-mumkthkw-8",
+      "type": "textbox",
+      "x": 20,
+      "y": 106,
+      "width": 170,
+      "height": 6,
+      "props": {
+        "text": "Status: {{data.status}}",
+        "binding": "data.status",
+        "fontSize": 10
+      }
+    },
+    {
+      "id": "pdf-mumkthkw-9",
+      "type": "textbox",
+      "x": 20,
+      "y": 116,
+      "width": 170,
+      "height": 6,
+      "props": {
+        "text": "Rejection Reason: {{data.rejectionReason}}",
+        "binding": "data.rejectionReason",
+        "fontSize": 10
+      }
+    },
+    {
+      "id": "pdf-mumkthkw-10",
+      "type": "textbox",
+      "x": 20,
+      "y": 128,
+      "width": 170,
+      "height": 7,
+      "props": {
+        "text": "Talep Kalemleri",
+        "fontSize": 12,
+        "fontWeight": "bold"
+      }
+    },
+    {
+      "id": "pdf-mumkthkw-11",
+      "type": "table",
+      "x": 20,
+      "y": 139,
+      "width": 170,
+      "height": 70,
+      "props": {
+        "binding": "data.purchaseRequestItems",
+        "columns": [
+          {
+            "key": "productName",
+            "label": "Product Name",
+            "width": 42
+          },
+          {
+            "key": "quantity",
+            "label": "Quantity",
+            "width": 42
+          },
+          {
+            "key": "unitPrice",
+            "label": "Unit Price",
+            "width": 42
+          },
+          {
+            "key": "lineTotal",
+            "label": "Line Total",
+            "width": 42
+          }
+        ],
+        "headerBgColor": "#f0f0f0",
+        "borderColor": "#cccccc",
+        "rowHeight": 7
+      }
+    },
+    {
+      "id": "pdf-mumkthkw-12",
+      "type": "textbox",
+      "x": 20,
+      "y": 213,
+      "width": 170,
+      "height": 7,
+      "props": {
+        "text": "Teklifler",
+        "fontSize": 12,
+        "fontWeight": "bold"
+      }
+    },
+    {
+      "id": "pdf-mumkthkw-13",
+      "type": "table",
+      "x": 20,
+      "y": 224,
+      "width": 170,
+      "height": 63,
+      "props": {
+        "binding": "data.quotations",
+        "columns": [
+          {
+            "key": "quotationDate",
+            "label": "Quotation Date",
+            "width": 56
+          },
+          {
+            "key": "quotationAmount",
+            "label": "Quotation Amount",
+            "width": 56
+          },
+          {
+            "key": "isSelected",
+            "label": "Is Selected",
+            "width": 56
+          }
+        ],
+        "headerBgColor": "#f0f0f0",
+        "borderColor": "#cccccc",
+        "rowHeight": 7
+      }
+    },
+    {
+      "id": "pdf-mumkthkw-14",
+      "type": "textbox",
+      "x": 20,
+      "y": 291,
+      "width": 170,
+      "height": 7,
+      "props": {
+        "text": "Onay Geçmişi",
+        "fontSize": 12,
+        "fontWeight": "bold"
+      }
+    },
+    {
+      "id": "pdf-mumkthkw-15",
+      "type": "table",
+      "x": 20,
+      "y": 302,
+      "width": 170,
+      "height": 56,
+      "props": {
+        "binding": "data.approvalHistory",
+        "columns": [
+          {
+            "key": "stepName",
+            "label": "Adım",
+            "width": 45
+          },
+          {
+            "key": "action",
+            "label": "Aksiyon",
+            "width": 30
+          },
+          {
+            "key": "userName",
+            "label": "Kullanıcı",
+            "width": 45
+          },
+          {
+            "key": "actionDate",
+            "label": "Tarih",
+            "width": 50
+          }
+        ],
+        "headerBgColor": "#f0f0f0",
+        "borderColor": "#cccccc",
+        "rowHeight": 7
+      }
+    }
+  ],
+  "apiBinding": {
+    "method": "GET",
+    "url": "api/services/app/PurchaseRequest/GetReportData?id={id}",
+    "params": [
+      {
+        "name": "id"
+      }
+    ]
+  },
+  "headerConfig": {
+    "enabled": true,
+    "text": "Satın Alma Talebi Detay Raporu",
+    "fontSize": 9
+  },
+  "pageNumberConfig": {
+    "enabled": true
+  }
+}
